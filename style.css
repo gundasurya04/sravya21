@@ -1,0 +1,1606 @@
+/* ========================================
+   OMNIFOOD LANDING PAGE - CSS
+   Mobile-first responsive design
+   ======================================== */
+
+/* RESET AND BASE STYLES */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Lato', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    line-height: 1.6;
+    color: #555;
+    background-color: #fff;
+}
+
+/* TYPOGRAPHY */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+p {
+    font-size: 1.6rem;
+}
+
+/* CONTAINER - limits max width and centers content */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+/* BUTTONS - reusable button styles */
+.btn {
+    display: inline-block;
+    padding: 1rem 2rem;
+    font-size: 1.4rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+
+.btn-primary {
+    background-color: #e67e22;
+    color: #fff;
+    border-color: #e67e22;
+}
+
+.btn-primary:hover {
+    background-color: transparent;
+    color: #e67e22;
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: #fff;
+    border-color: #fff;
+}
+
+.btn-secondary:hover {
+    background-color: #fff;
+    color: #333;
+}
+
+.btn-full {
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+/* HEADER - sticky navigation bar */
+.header {
+    background-color: rgba(0, 0, 0, 0.95);
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    flex: 1;
+}
+
+.logo img {
+    height: 4rem;
+    width: auto;
+}
+
+/* NAVIGATION - start hidden on mobile */
+.nav {
+    display: none;
+    flex: 2;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.nav-link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #e67e22;
+}
+
+/* HAMBURGER MENU - mobile only */
+.hamburger {
+    background: none;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+.hamburger span {
+    width: 2.5rem;
+    height: 3px;
+    background-color: #fff;
+    transition: all 0.3s ease;
+    transform-origin: center;
+}
+
+/* Animated hamburger when active */
+.hamburger.active span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+/* Show menu when active class added */
+.nav.active {
+    display: flex;
+}
+
+.nav.active {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.95);
+    flex-direction: column;
+    padding: 1rem 0;
+}
+
+.nav.active .nav-list {
+    flex-direction: column;
+    gap: 0;
+    width: 100%;
+}
+
+.nav.active .nav-list li {
+    border-bottom: 1px solid #555;
+    padding: 1rem 1.5rem;
+}
+
+.nav.active .nav-list li:last-child {
+    border-bottom: none;
+}
+
+/* HERO SECTION */
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+                url('assets/hero-bg.jpg') center/cover no-repeat;
+    color: #fff;
+    padding: 6rem 0;
+    text-align: center;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-content {
+    z-index: 2;
+}
+
+.hero-title {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-subtitle {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.hero-buttons .btn {
+    padding: 1rem 2rem;
+    font-size: 1.4rem;
+}
+
+/* HOW IT WORKS SECTION */
+.how-it-works {
+    padding: 4rem 0;
+    background-color: #f4f4f4;
+}
+
+.how-it-works-layout {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.how-it-works h2 {
+    font-size: 2.4rem;
+    margin-bottom: 2rem;
+    color: #333;
+}
+
+.steps-list {
+    list-style: none;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.step {
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-start;
+}
+
+.step-number {
+    font-size: 3rem;
+    font-weight: 300;
+    color: #e67e22;
+    flex-shrink: 0;
+}
+
+.step p {
+    font-size: 1.6rem;
+    color: #555;
+}
+
+.how-it-works-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+.app-download {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.app-link {
+    display: inline-block;
+}
+
+.app-link img {
+    height: 4rem;
+    width: auto;
+}
+
+/* CITIES SECTION */
+.our-cities {
+    padding: 4rem 0;
+    background-color: #fff;
+}
+
+.our-cities h2 {
+    font-size: 2.4rem;
+    margin-bottom: 2rem;
+    color: #333;
+}
+
+.cities-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+.city-card {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.city-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.city-card img {
+    width: 100%;
+    height: 20rem;
+    object-fit: cover;
+    display: block;
+}
+
+.city-info {
+    padding: 1.5rem;
+    background-color: #f9f9f9;
+}
+
+.city-info h3 {
+    font-size: 1.8rem;
+    color: #e67e22;
+    margin-bottom: 1rem;
+}
+
+.city-stats {
+    list-style: none;
+    font-size: 1.4rem;
+    color: #555;
+}
+
+.city-stats li {
+    margin-bottom: 0.8rem;
+}
+
+.city-stats strong {
+    color: #333;
+    font-weight: 700;
+}
+
+/* TESTIMONIALS SECTION */
+.testimonials {
+    padding: 4rem 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                url('assets/testimonials-bg.jpg') center/cover no-repeat;
+    color: #fff;
+}
+
+.testimonials h2 {
+    font-size: 2.4rem;
+    margin-bottom: 2rem;
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+.testimonial {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 1.5rem;
+    border-radius: 8px;
+    backdrop-filter: blur(10px);
+}
+
+.testimonial blockquote {
+    font-size: 1.4rem;
+    margin-bottom: 1.5rem;
+    font-style: italic;
+    line-height: 1.8;
+}
+
+.testimonial blockquote::before {
+    content: '"';
+    font-size: 3rem;
+    color: #e67e22;
+    line-height: 0;
+    vertical-align: -0.4em;
+    margin-right: 0.5rem;
+}
+
+.testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.testimonial-author img {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.testimonial-author strong {
+    font-size: 1.4rem;
+}
+
+/* PRICING SECTION */
+.pricing {
+    padding: 4rem 0;
+    background-color: #f4f4f4;
+}
+
+.pricing h2 {
+    font-size: 2.4rem;
+    margin-bottom: 2rem;
+    color: #333;
+}
+
+.pricing-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+.pricing-card {
+    background-color: #fff;
+    padding: 2rem 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.pricing-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.pricing-card-featured {
+    box-shadow: 0 4px 16px rgba(230, 126, 34, 0.3);
+}
+
+.pricing-card-featured:hover {
+    box-shadow: 0 12px 24px rgba(230, 126, 34, 0.4);
+}
+
+.pricing-card h3 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 1.5rem;
+}
+
+.plan-price {
+    font-size: 1.4rem;
+    margin-bottom: 1.5rem;
+}
+
+.currency {
+    font-size: 1.6rem;
+}
+
+.amount {
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: #e67e22;
+}
+
+.period {
+    color: #999;
+}
+
+.plan-features {
+    list-style: none;
+    margin-bottom: 2rem;
+    text-align: left;
+    font-size: 1.4rem;
+    color: #555;
+}
+
+.plan-features li {
+    padding: 0.8rem 0;
+    border-bottom: 1px solid #eee;
+}
+
+.plan-features li:last-child {
+    border-bottom: none;
+}
+
+.checkmark {
+    color: #27ae60;
+    font-weight: 700;
+    margin-right: 0.5rem;
+}
+
+.cross {
+    color: #e74c3c;
+    font-weight: 700;
+    margin-right: 0.5rem;
+}
+
+/* FOOTER */
+.footer {
+    background-color: #333;
+    color: #999;
+    padding: 3rem 0 1rem;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    align-items: center;
+}
+
+.footer-nav {
+    width: 100%;
+}
+
+.footer-links {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.footer-links a {
+    color: #999;
+    text-decoration: none;
+    font-size: 1.4rem;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #e67e22;
+}
+
+.social-links {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.social-links a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 3.5rem;
+    height: 3.5rem;
+    border: 2px solid #999;
+    border-radius: 50%;
+    color: #999;
+    text-decoration: none;
+    font-weight: 700;
+    transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+    border-color: #e67e22;
+    color: #e67e22;
+}
+
+.footer-copyright {
+    border-top: 1px solid #555;
+    padding-top: 1rem;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+/* ========================================
+   RESPONSIVE BREAKPOINTS
+   Tablet at 834px and Desktop at 1200px+
+   ======================================== */
+
+@media screen and (min-width: 834px) {
+    /* Navigation visible on tablet and up */
+    .nav {
+        display: flex;
+    }
+
+    .hamburger {
+        display: none;
+    }
+
+    /* Hero adjustments */
+    .hero-title {
+        font-size: 4rem;
+    }
+
+    .hero-subtitle {
+        font-size: 2.2rem;
+    }
+
+    .hero-buttons {
+        flex-direction: row;
+        gap: 2rem;
+    }
+
+    /* How it works - two columns */
+    .how-it-works-layout {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
+        align-items: center;
+    }
+
+    .how-it-works-content {
+        order: -1;
+    }
+
+    /* Cities grid - 2 columns */
+    .cities-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Testimonials grid - 2 columns */
+    .testimonials-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Pricing grid - 2 columns */
+    .pricing-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .pricing-card-featured {
+        grid-column: 1 / -1;
+        max-width: 50%;
+        margin: 0 auto;
+    }
+
+    /* Footer layout */
+    .footer-content {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .footer-nav {
+        flex: 1;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    html {
+        font-size: 12px;
+    }
+
+    .hero-title {
+        font-size: 5.2rem;
+    }
+
+    .hero-subtitle {
+        font-size: 2.8rem;
+    }
+
+    /* Cities grid - 4 columns */
+    .cities-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    /* Testimonials grid - 3 columns */
+    .testimonials-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    /* Pricing grid - 3 columns */
+    .pricing-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .pricing-card-featured {
+        grid-column: auto;
+        max-width: 100%;
+        transform: scale(1.05);
+    }
+}
+
+@media screen and (max-width: 390px) {
+    html {
+        font-size: 9px;
+    }
+
+    .container {
+        padding: 0 1rem;
+    }
+
+    .hero {
+        padding: 3rem 0;
+    }
+
+    .hero-title {
+        font-size: 2.4rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.4rem;
+    }
+
+    .hero-buttons {
+        gap: 0.8rem;
+    }
+
+    .hero-buttons .btn {
+        padding: 0.8rem 1.2rem;
+        font-size: 1.2rem;
+    }
+
+    .how-it-works,
+    .our-cities,
+    .pricing {
+        padding: 2.5rem 0;
+    }
+
+    .how-it-works h2,
+    .our-cities h2,
+    .pricing h2,
+    .testimonials h2 {
+        font-size: 1.8rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .step-number {
+        font-size: 2rem;
+    }
+
+    .step p {
+        font-size: 1.4rem;
+    }
+
+    .app-download {
+        gap: 0.8rem;
+    }
+
+    .city-card img {
+        height: 15rem;
+    }
+
+    .city-info h3 {
+        font-size: 1.6rem;
+    }
+
+    .city-stats {
+        font-size: 1.2rem;
+    }
+
+    .testimonial blockquote {
+        font-size: 1.2rem;
+    }
+
+    .pricing-card {
+        padding: 1.5rem 1rem;
+    }
+
+    .amount {
+        font-size: 2rem;
+    }
+
+    .plan-features {
+        font-size: 1.2rem;
+    }
+
+    .footer-content {
+        gap: 1.5rem;
+    }
+
+    .footer-links {
+        gap: 0.8rem;
+    }
+
+    .footer-links a {
+        font-size: 1.2rem;
+    }
+
+    .social-links a {
+        width: 2.8rem;
+        height: 2.8rem;
+        font-size: 1.2rem;
+    }
+}
+
+
+/* Mobile-first base styles.
+   Styles start with the smallest viewport in mind, with responsive overrides applied later for larger or narrower screens. */
+ 
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+p {
+    font-size: 1.8rem;
+}
+
+ 
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+ 
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    font-size: 1.6rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.btn-primary {
+    background-color: #e67e22;
+    color: #fff;
+    border: 2px solid #e67e22;
+}
+
+.btn-primary:hover {
+    background-color: transparent;
+    color: #e67e22;
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: #fff;
+    border: 2px solid #fff;
+}
+
+.btn-secondary:hover {
+    background-color: #fff;
+    color: #333;
+}
+
+.btn-block {
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+ 
+
+/* Header navigation: mobile-first sticky nav with a dark background.
+   The layout supports small screens first, then expands to a wider horizontal menu on larger viewports. */
+.header {
+    position: sticky;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.95);
+    padding: 15px 0;
+    z-index: 100;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    flex: 1;
+}
+
+.logo-img {
+    height: 50px;
+    width: auto;
+}
+
+.nav-menu {
+    flex: 2;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+}
+
+.nav-link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+    text-transform: uppercase;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+}
+
+.nav-link:hover {
+    color: #e67e22;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 5px 0;
+    transition: all 0.3s ease;
+    transform-origin: center;
+}
+
+.hamburger.active span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+/* HERO SECTION */
+/* Mobile-first hero: compact, centered, and readable on small screens.
+   Larger screens retain the same strong visual lead with full-viewport styling. */
+.hero {
+    position: relative;
+    min-height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
+                url('assets/hero-bg.jpg') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    padding-top: 50px;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-headline {
+    font-size: 5.2rem;
+    margin-bottom: 20px;
+    font-weight: 300;
+    letter-spacing: 3px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-subheading {
+    font-size: 2.8rem;
+    margin-bottom: 40px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.hero-buttons .btn {
+    padding: 15px 40px;
+    font-size: 1.8rem;
+}
+
+ 
+
+/* The how-it-works section uses a two-column grid on desktop.
+   It keeps text and imagery balanced and collapses cleanly on smaller screens. */
+.how-it-works {
+    padding: 80px 0;
+    background-color: #f4f4f4;
+}
+
+.how-it-works-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.how-it-works-image {
+    display: flex;
+    justify-content: center;
+}
+
+.phone-img {
+    max-width: 100%;
+    height: auto;
+    max-height: 400px;
+}
+
+.section-title {
+    font-size: 3.2rem;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.section-title-light {
+    color: #fff;
+}
+
+.steps-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.step {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.step-number {
+    font-size: 4rem;
+    font-weight: 300;
+    color: #e67e22;
+    min-width: 60px;
+}
+
+.step p {
+    font-size: 1.8rem;
+    color: #555;
+}
+
+.app-buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.app-link {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.app-link:hover {
+    transform: translateY(-5px);
+}
+
+.store-badge {
+    height: 50px;
+    width: auto;
+}
+ 
+
+.our-cities {
+    padding: 80px 0;
+    background-color: #fff;
+}
+
+/* City cards are laid out in a 4-column grid for wide screens.
+   Each card remains independent so the grid can wrap naturally on smaller viewports. */
+/* City cards use a 4-column grid on wide screens.
+   This allows natural wrapping when the viewport narrows. */
+.cities-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.city-card {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.city-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.city-image {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+}
+
+.city-content {
+    padding: 25px;
+    background-color: #f9f9f9;
+}
+
+.city-name {
+    font-size: 2.2rem;
+    color: #e67e22;
+    margin-bottom: 15px;
+}
+
+.city-stats {
+    list-style: none;
+    font-size: 1.6rem;
+    color: #555;
+}
+
+.city-stats li {
+    margin-bottom: 10px;
+}
+
+.city-stats span {
+    font-weight: 700;
+    color: #333;
+}
+ 
+
+.testimonials {
+    position: relative;
+    padding: 80px 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                url('assets/testimonials-bg.jpg') center/cover no-repeat;
+    color: #fff;
+}
+
+.testimonials-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+}
+
+.testimonials .container {
+    position: relative;
+    z-index: 2;
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.testimonial-card {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 8px;
+    backdrop-filter: blur(10px);
+}
+
+.testimonial-quote {
+    font-size: 1.6rem;
+    margin-bottom: 30px;
+    font-style: italic;
+    line-height: 1.8;
+}
+
+.testimonial-quote::before {
+    content: '"';
+    font-size: 4rem;
+    color: #e67e22;
+    line-height: 0;
+    vertical-align: -0.4em;
+    margin-right: 5px;
+}
+
+.testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.author-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.author-name {
+    font-size: 1.6rem;
+    margin: 0;
+}
+
+ 
+
+.pricing {
+    padding: 80px 0;
+    background-color: #f4f4f4;
+}
+
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.pricing-card {
+    background-color: #fff;
+    padding: 50px 30px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.pricing-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.pricing-card-featured {
+    transform: scale(1.05);
+    box-shadow: 0 4px 16px rgba(230, 126, 34, 0.3);
+}
+
+.pricing-card-featured:hover {
+    box-shadow: 0 12px 24px rgba(230, 126, 34, 0.4);
+}
+
+.plan-name {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.plan-price {
+    font-size: 3rem;
+    color: #e67e22;
+    margin-bottom: 30px;
+    font-weight: 300;
+}
+
+.currency {
+    font-size: 2rem;
+}
+
+.amount {
+    font-weight: 700;
+}
+
+.period {
+    font-size: 1.6rem;
+    color: #999;
+}
+
+.plan-features {
+    list-style: none;
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+.plan-features li {
+    font-size: 1.6rem;
+    color: #555;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.plan-features li:last-child {
+    border-bottom: none;
+}
+
+.checkmark {
+    color: #27ae60;
+    font-weight: 700;
+    margin-right: 10px;
+}
+
+.cross {
+    color: #e74c3c;
+    font-weight: 700;
+    margin-right: 10px;
+}
+
+ 
+
+.footer {
+    background-color: #333;
+    color: #999;
+    padding: 40px 0 20px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.footer-links ul {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+}
+
+.footer-links a {
+    color: #999;
+    text-decoration: none;
+    font-size: 1.6rem;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #e67e22;
+}
+
+.footer-social {
+    display: flex;
+    gap: 20px;
+}
+
+.social-icon {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 35px;
+    height: 35px;
+    background-color: transparent;
+    border: 2px solid #999;
+    border-radius: 50%;
+    color: #999;
+    text-decoration: none;
+    font-weight: 700;
+    transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+    border-color: #e67e22;
+    color: #e67e22;
+}
+
+.footer-bottom {
+    border-top: 1px solid #555;
+    padding-top: 20px;
+    text-align: center;
+    font-size: 1.4rem;
+}
+
+ 
+
+ 
+/* Responsive breakpoints: mobile-first overrides for narrower viewports.
+   Tablet and phone styles are applied below using max-width queries so the default styles target larger screens only when needed.
+   This keeps the mobile presentation clean and the desktop layout enhanced progressively. */
+@media screen and (max-width: 834px) {
+    html {
+        font-size: 56.25%;
+    }
+
+    .hero-headline {
+        font-size: 4rem;
+    }
+
+    .hero-subheading {
+        font-size: 2.2rem;
+    }
+
+    .nav-list {
+        gap: 20px;
+    }
+
+    .nav-link {
+        font-size: 1.3rem;
+    }
+
+    
+
+ 
+    .how-it-works-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .how-it-works-image {
+        order: 2;
+    }
+
+    .how-it-works-content {
+        order: 1;
+    }
+
+   
+    .cities-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    
+    .testimonials-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+ 
+    .pricing-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .pricing-card-featured {
+        transform: scale(1);
+        grid-column: 1 / -1;
+        max-width: 50%;
+        margin: 0 auto;
+    }
+
+    
+    .footer-container {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .footer-links ul {
+        gap: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 390px) {
+    .nav-menu {
+        display: none;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+        background-color: rgba(0, 0, 0, 0.95);
+        flex-direction: column;
+        padding: 20px 0;
+        z-index: 100;
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+
+    .nav-list {
+        flex-direction: column;
+        gap: 0;
+        width: 100%;
+    }
+
+    .nav-list li {
+        border-bottom: 1px solid #555;
+        padding: 15px 20px;
+    }
+
+    .nav-list li:last-child {
+        border-bottom: none;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+}
+
+ 
+/* Small phone breakpoint: simplify spacing and scale text down.
+   This breakpoint is intentionally a little larger than 390px to catch narrow screens
+   where the browser may render the viewport at a slightly different CSS width. */
+@media screen and (max-width: 400px) {
+    html {
+        font-size: 50%;
+    }
+
+    .container {
+        padding: 0 15px;
+    }
+
+    .hero-headline {
+        font-size: 3rem;
+        margin-bottom: 15px;
+    }
+
+    .hero-subheading {
+        font-size: 1.8rem;
+        margin-bottom: 25px;
+    }
+
+    .hero-buttons {
+        gap: 15px;
+        flex-direction: column;
+    }
+
+    .hero-buttons .btn {
+        padding: 12px 20px;
+        font-size: 1.4rem;
+    }
+
+ 
+    .how-it-works,
+    .our-cities,
+    .pricing {
+        padding: 50px 0;
+    }
+
+    .section-title {
+        font-size: 2.4rem;
+        margin-bottom: 20px;
+    }
+ 
+    .steps-container {
+        gap: 20px;
+    }
+
+    .step-number {
+        font-size: 3rem;
+    }
+
+    .step p {
+        font-size: 1.5rem;
+    }
+
+    .app-buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .store-badge {
+        height: 40px;
+    }
+
+     
+    .cities-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .city-image {
+        height: 200px;
+    }
+ 
+    .testimonials-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .testimonial-card {
+        padding: 20px;
+    }
+
+    .testimonial-quote {
+        font-size: 1.4rem;
+        margin-bottom: 20px;
+    }
+
+   
+    .pricing-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .pricing-card {
+        padding: 30px 20px;
+    }
+
+    .plan-price {
+        font-size: 2.4rem;
+    }
+
+    .plan-features li {
+        font-size: 1.4rem;
+    }
+
+    
+    .footer-links ul {
+        gap: 10px;
+        font-size: 1.3rem;
+    }
+
+    .footer-bottom {
+        font-size: 1.2rem;
+    }
+}

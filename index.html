@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OmniFood - Healthy Food Delivered to Your Door</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header with navigation -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <!-- Logo is the home link conceptually -->
+                <a href="#" class="logo" aria-label="OmniFood Home">
+                    <img src="assets/logo.png" alt="OmniFood Logo">
+                </a>
+
+                <!-- Navigation menu - hidden on mobile, shown via hamburger -->
+                <nav class="nav" id="nav-menu" aria-label="Main Navigation">
+                    <ul class="nav-list">
+                        <li><a href="#" class="nav-link">Food Delivery</a></li>
+                        <li><a href="#how-it-works" class="nav-link">How It Works</a></li>
+                        <li><a href="#our-cities" class="nav-link">Our Cities</a></li>
+                        <li><a href="#pricing" class="nav-link">Sign Up</a></li>
+                    </ul>
+                </nav>
+
+                <!-- Hamburger button for mobile -->
+                <button class="hamburger" id="hamburger-btn" aria-label="Toggle Navigation Menu" aria-expanded="false" aria-controls="nav-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero section with clear call-to-action -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="hero-title">Goodbye Junk Food</h1>
+                    <p class="hero-subtitle">Hello Super Healthy Food</p>
+                    <div class="hero-buttons">
+                        <a href="#" class="btn btn-primary">I'm Hungry</a>
+                        <a href="#" class="btn btn-secondary">Show Me More</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- How it works section - explains the value proposition -->
+        <section id="how-it-works" class="how-it-works">
+            <div class="container">
+                <div class="how-it-works-layout">
+                    <!-- Image on mobile appears below, on desktop to the right -->
+                    <div class="how-it-works-image">
+                        <img src="assets/phone=mockup.png" alt="OmniFood mobile app on phone screen">
+                    </div>
+
+                    <!-- Steps explanation -->
+                    <div class="how-it-works-content">
+                        <h2>How It Works</h2>
+                        <ol class="steps-list">
+                            <li class="step">
+                                <div class="step-number">1</div>
+                                <p>Choose the plan that fits best for your needs and sign up today</p>
+                            </li>
+                            <li class="step">
+                                <div class="step-number">2</div>
+                                <p>Pay for the plan and download the app</p>
+                            </li>
+                            <li class="step">
+                                <div class="step-number">3</div>
+                                <p>You are done—start ordering!</p>
+                            </li>
+                        </ol>
+
+                        <!-- App store buttons -->
+                        <div class="app-download">
+                            <a href="#" class="app-link">
+                                <img src="assets/googleplay.png" alt="Download on Google Play">
+                            </a>
+                            <a href="#" class="app-link">
+                                <img src="assets/app store.png" alt="Download on App Store">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Cities section - shows where service is available -->
+        <section id="our-cities" class="our-cities">
+            <div class="container">
+                <h2>We're Currently in These Cities</h2>
+                <div class="cities-grid">
+                    <article class="city-card">
+                        <img src="assets/lisbon.jpg" alt="Lisbon street view">
+                        <div class="city-info">
+                            <h3>Lisbon</h3>
+                            <ul class="city-stats">
+                                <li><strong>1,600+</strong> Happy Eaters</li>
+                                <li><strong>60+</strong> Restaurant Partners</li>
+                                <li><strong>10,000+</strong> Deliveries</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="city-card">
+                        <img src="assets/london.jpg" alt="London street view">
+                        <div class="city-info">
+                            <h3>London</h3>
+                            <ul class="city-stats">
+                                <li><strong>3,200+</strong> Happy Eaters</li>
+                                <li><strong>102+</strong> Restaurant Partners</li>
+                                <li><strong>20,000+</strong> Deliveries</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="city-card">
+                        <img src="assets/berlin.jpg" alt="Berlin street view">
+                        <div class="city-info">
+                            <h3>Berlin</h3>
+                            <ul class="city-stats">
+                                <li><strong>1,200+</strong> Happy Eaters</li>
+                                <li><strong>50+</strong> Restaurant Partners</li>
+                                <li><strong>8,500+</strong> Deliveries</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="city-card">
+                        <img src="assets/san-francisco.jpg" alt="San Francisco street view">
+                        <div class="city-info">
+                            <h3>San Francisco</h3>
+                            <ul class="city-stats">
+                                <li><strong>2,500+</strong> Happy Eaters</li>
+                                <li><strong>75+</strong> Restaurant Partners</li>
+                                <li><strong>15,000+</strong> Deliveries</li>
+                            </ul>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials section - builds trust through customer voices -->
+        <section class="testimonials">
+            <div class="container">
+                <h2>Our Customers Can't Live Without Us</h2>
+                <div class="testimonials-grid">
+                    <article class="testimonial">
+                        <blockquote>
+                            <p>Inceptos hymenaeos molestie in adipiscing mollis duis sed ante faucibus sed in curabitur semper sed magna condimentum et in sem semper risus consectetur molestie vivamus sit augue molestie odio augue in amet risus.</p>
+                        </blockquote>
+                        <footer class="testimonial-author">
+                            <img src="assets/testimonial-1.jpg" alt="Jane Doe">
+                            <strong>Jane Doe</strong>
+                        </footer>
+                    </article>
+
+                    <article class="testimonial">
+                        <blockquote>
+                            <p>Pellentesque auctor sem sed nisl sodales fermentum accumsan sem auctor quis dictumst mauris pellentesque vivamus sed commodo sed eros vestibulum non ipsum et sed massa tempor.</p>
+                        </blockquote>
+                        <footer class="testimonial-author">
+                            <img src="assets/testimonial-2.jpg" alt="John Smith">
+                            <strong>John Smith</strong>
+                        </footer>
+                    </article>
+
+                    <article class="testimonial">
+                        <blockquote>
+                            <p>Phasellus pulvinar luctus metus sed sit amet leo diam suspendisse potenti vivamus pharetra ante eros sed tempus mollis eros et pretium odio sapien nec orci.</p>
+                        </blockquote>
+                        <footer class="testimonial-author">
+                            <img src="assets/testimonial-3.jpg" alt="Sarah Johnson">
+                            <strong>Sarah Johnson</strong>
+                        </footer>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing section - helps users choose their plan -->
+        <section id="pricing" class="pricing">
+            <div class="container">
+                <h2>Start Eating Healthy Today</h2>
+                <div class="pricing-grid">
+                    <article class="pricing-card">
+                        <h3>Premium</h3>
+                        <div class="plan-price">
+                            <span class="currency">$</span><span class="amount">399</span>
+                            <span class="period">/month</span>
+                        </div>
+                        <ul class="plan-features">
+                            <li><span class="checkmark">✓</span> Unlimited meals</li>
+                            <li><span class="checkmark">✓</span> Free delivery</li>
+                            <li><span class="checkmark">✓</span> 24/7 support</li>
+                            <li><span class="checkmark">✓</span> Restaurant access</li>
+                            <li><span class="checkmark">✓</span> Exclusive perks</li>
+                        </ul>
+                        <a href="#" class="btn btn-primary btn-full">Sign Up Now</a>
+                    </article>
+
+                    <article class="pricing-card pricing-card-featured">
+                        <h3>Pro</h3>
+                        <div class="plan-price">
+                            <span class="currency">$</span><span class="amount">199</span>
+                            <span class="period">/month</span>
+                        </div>
+                        <ul class="plan-features">
+                            <li><span class="checkmark">✓</span> Up to 30 meals</li>
+                            <li><span class="checkmark">✓</span> Free delivery</li>
+                            <li><span class="checkmark">✓</span> 24/7 support</li>
+                            <li><span class="cross">✗</span> Restaurant access</li>
+                            <li><span class="cross">✗</span> Exclusive perks</li>
+                        </ul>
+                        <a href="#" class="btn btn-primary btn-full">Sign Up Now</a>
+                    </article>
+
+                    <article class="pricing-card">
+                        <h3>Starter</h3>
+                        <div class="plan-price">
+                            <span class="currency">$</span><span class="amount">19</span>
+                            <span class="period">/meal</span>
+                        </div>
+                        <ul class="plan-features">
+                            <li><span class="checkmark">✓</span> Pay per meal</li>
+                            <li><span class="cross">✗</span> Free delivery</li>
+                            <li><span class="checkmark">✓</span> Standard support</li>
+                            <li><span class="cross">✗</span> Restaurant access</li>
+                            <li><span class="cross">✗</span> Exclusive perks</li>
+                        </ul>
+                        <a href="#" class="btn btn-primary btn-full">Sign Up Now</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer with links and social media -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <nav class="footer-nav" aria-label="Footer Navigation">
+                    <ul class="footer-links">
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Press</a></li>
+                        <li><a href="#">iOS App</a></li>
+                        <li><a href="#">Android App</a></li>
+                    </ul>
+                </nav>
+
+                <div class="social-links" aria-label="Social Media">
+                    <a href="#" title="Follow on Facebook">f</a>
+                    <a href="#" title="Follow on Twitter">t</a>
+                    <a href="#" title="Follow on LinkedIn">in</a>
+                </div>
+            </div>
+
+            <p class="footer-copyright">&copy; 2026 OmniFood. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
